@@ -12,7 +12,80 @@
 
 */
 
-/* -------------------- *\
-        MAIN CONFIG
-\* -------------------- */
+            /* -------------------- *\
+                    MAIN CONFIG
+            \* -------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(12, 12, 12);
+    color: #f0f0f5;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Staatliches', cursive;
+}
+
+p {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+
+            /* -------------------- *\
+                     #HEADER
+            \* -------------------- */
+
+#header {
+    width: 100%;
+    min-height: 80px;
+    margin-bottom: 15px;
+    padding: 0 20px;
+
+    background-color: white;
+
+    position: fixed top;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+        
+}
+
+.logo {
+
+}
+
+#header-img {
+    width: 150px;
+    height: auto;
+}
+
+#nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    list-style: none;
+
+}
+
+#nav li {
+    padding: 10px;
+    margin-left: 10px;    
+}
+
+
+
 
