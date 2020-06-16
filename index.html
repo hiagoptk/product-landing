@@ -12,16 +12,25 @@
 </head>
 <body>
     <header id="header">
-        <div class="logo">
+        <div>
             <a href="/"><img id="header-img" src="./assets/logo.png" alt="logo"></a>
         </div>
 
-        <nav id="nav-bar">
-            <ul id="nav">
+        <nav class="desktop">
+            <ul id="nav-bar">
                 <li><a href="#features"><p>Features</p></a> </li>
                 <li><a href="#process"><p>My process</p></a></li>
                 <li><a href="#prices"><p>Prices</p></a></li>
             </ul>
+        </nav>
+
+        <nav class="mobile">
+            <button class="drop-btn"><i class="fas fa-bars icon"></i></button>
+            <div id="dropdown-content">
+                <a href="#features"><p>Features</p></a>
+                <a href="#process"><p>My process</p></a>
+                <a href="#prices"><p>Prices</p></a>
+            </div>
         </nav>
 
     </header>
@@ -44,7 +53,7 @@
                 id="email"
                 name="email"
                 placeholder="Cadastre seu email">
-                <button id="btnForm"><p>Cadastrar</p></button>
+                <button id="submit"><p>Cadastrar</p></button>
             </form>
 
             <div class="featureBox">

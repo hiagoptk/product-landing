@@ -45,6 +45,12 @@ p {
     font-size: 20px;
 }
 
+a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
 
 
             /* -------------------- *\
@@ -61,37 +67,100 @@ p {
 
     position: fixed top;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
         
 }
 
-.logo {
-
-}
 
 #header-img {
     width: 150px;
     height: auto;
 }
 
-#nav {
+.desktop {
+    animation: toDesktop 2s forwards;
+}
+
+#nav-bar {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
     list-style: none;
 
 }
 
-#nav li {
+#nav-bar li {
     padding: 10px;
     margin-left: 10px;    
 }
 
+.drop-btn {
+    border: none;
+    padding: 10px;
+    background-color: white;
+    width: 20px;
+    height: auto;
 
+}
+
+.icon {
+    color: goldenrod;
+    font-size: 50px;
+}
+
+.mobile {
+    position: relative;
+    display: none;
+    margin-right: 30px;
+    opacity: 0;
+
+    animation: fadeOut 2s forwards;
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+#dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+#dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.mobile:hover #dropdown-content {
+    display: block;
+    justify-content: left;
+}
+
+/* DROPDOWN MENU FOR MOBILE */
+@media only screen and (max-width: 720px) {
+ 
+    .desktop {
+        animation: toMobile 2s forwards;
+        display: none;
+        
+    }
+
+    .mobile {
+        animation: fadeIn 2s 250ms forwards;
+        display: inline-block;
+    }
+   
+}
 
             /* -------------------- *\
                      #MAIN
@@ -106,7 +175,6 @@ p {
     margin-bottom: 25px;
     padding: 20px;
 }
-
 
 
             /* -------------------- *\
@@ -146,7 +214,7 @@ p {
     margin-bottom: 2px;
 }
 
-#btnForm {
+#submit {
     background-color: goldenrod;
     color: white;
     border-radius: 5px;
@@ -168,13 +236,27 @@ p {
     text-align: center;
 }
 
+
 .feature {
     border: white solid 1px;
     border-radius: 5px;
     width: 40%;
     margin: 0 10px;
-    padding: 10px 0;
+    padding: 10px;
 
+}
+
+@media (max-width: 720px){
+    .featureBox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        margin: 10px 0;
+        width: 60%;
+    }
 }
 
 .icon {
@@ -227,4 +309,61 @@ p {
     flex-direction: column;
     align-items: center;
 
+}
+
+
+
+
+            /* -------------------- *\
+                    ANIMATIONS
+            \* -------------------- */
+
+@keyframes toMobile {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
+}
+
+@keyframes toDesktop {
+    from {
+        opacity: 0;
+    } to {
+        opacity:  1;
+       /
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+        
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    } to {
+        opacity:  0;
+        
+    }
+}
+
+@keyframes vai-e-volta {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
