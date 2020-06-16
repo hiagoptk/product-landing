@@ -1,388 +1,396 @@
 /*
 
-                CSS MADE WITH LOVE. 
-                Pode copiar, só não faz igual ;) 
+    CSS MADE WITH LOVE. 
+    Pode copiar, só não faz igual ;) 
 
-                Project from freeCodeCamp 
-                Responsive Web Design - Build a Landing Page
+    Project from freeCodeCamp 
+    Responsive Web Design - Build a Landing Page
 
-                Inícia: 14:06:2020
-                Final: 
+    Inícia: 14:06:2020
+    Final: 
 
 
 */
 
+/* -------------------- *\
+        MAIN CONFIG
+\* -------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(12, 12, 12);
+    color: #f0f0f5;
+    height: auto;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Staatliches', cursive;
+}
+
+.title {
+    font-size: 35px;
+}
+
+p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+}
+
+a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
             /* -------------------- *\
-                    MAIN CONFIG
+                        #HEADER
             \* -------------------- */
 
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            
-            body {
-                background-color: rgb(12, 12, 12);
-                color: #f0f0f5;
-                height: auto;
-            
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-            
-            h1, h2, h3, h4, h5, h6 {
-                font-family: 'Staatliches', cursive;
-            }
-            
-            .title {
-                font-size: 35px;
-            }
-            
-            p {
-                font-family: 'Roboto Condensed', sans-serif;
-                font-size: 20px;
-            }
-            
-            a {
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-            }
-            
-            
-                        /* -------------------- *\
-                                 #HEADER
-                        \* -------------------- */
-            
-            #header {
-                width: 100%;
-                min-height: 80px;
-                margin-bottom: 50px;
-                padding: 0 20px;
-            
-                background-color: white;
-            
-                position: fixed;
-                top: 0;
-                display: flex;
-                flex-direction: row-reverse;
-                flex-wrap: nowrap;
-                justify-content: space-between;
-                align-items: center;
-                    
-            }
-            
-            
-            #header-img {
-                width: 50px;
-                height: auto;
-                border-radius: 50%;
-            }
-            
-            .desktop {
-                animation: toDesktop 2s forwards;
-            }
-            
-            #nav-bar {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-            
-                list-style: none;
-            
-            }
-            
-            #nav-bar li {
-                padding: 10px;
-                margin-left: 10px;    
-            }
-            
-            .drop-btn {
-                border: none;
-                padding: 5px;
-                background-color: white;
-                width: 15px;
-                height: auto;
-            
-            }
-            
-            .icon {
-                color: goldenrod;
-                font-size: 25px;
-            }
-            
-            .mobile {
-                position: relative;
-                display: none;
-                margin-right: 25px;
-                opacity: 0;
-            
-                animation: fadeOut 2s forwards;
-            }
-            
-            #dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: #f9f9f9;
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
-            }
-            
-            #dropdown-content a {
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-              }
-            
-            #dropdown-content a:hover {
-                background-color: #f1f1f1
-            }
-            
-            .mobile:hover #dropdown-content {
-                display: block;
-                justify-content: left;
-            }
-            
-            /* DROPDOWN MENU FOR MOBILE */
-            @media only screen and (max-width: 720px) {
-             
-                .desktop {
-                    animation: toMobile 2s forwards;
-                    display: none;
-                    
-                }
-            
-                .mobile {
-                    animation: fadeIn 2s 250ms forwards;
-                    display: inline-block;
-                }
-               
-            }
-            
-                        /* -------------------- *\
-                                 #MAIN
-                        \* -------------------- */
-            
-            #main {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            
-                height: auto;
-                margin-top: 60px;
-                margin-bottom: 25px;
-                padding: 20px;
-            }
-            
-            
-                        /* -------------------- *\
-                                 #FEATURES
-                        \* -------------------- */
-            
-            #features {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            
-            }
-            
-            #titleBox {
-                text-align: center;
-                margin: 15px 0;
-            }
-            
-            #form {
-                border: white solid 1px;
-                border-radius: 8px;
-                padding: 10px 25px;
-                margin-bottom: 25px;
-            
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            
-            }
-            
-            #email {
-                width: 99%;
-                height: 25px;
-                border-radius: 2px;
-                padding: 0 5px;
-                border-style: none;
-                margin-bottom: 2px;
-            }
-            
-            #submit {
-                background-color: goldenrod;
-                color: white;
-                border-radius: 5px;
-                border-style: none;
-                width: 99%;
-                height: auto;
-                padding: 0 5px;
-            
-            }
-            
-            .featureBox {
-                padding: 30px;
-                margin-bottom: 25px;
-            
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                
-                text-align: center;
-            }
-            
-            
-            .feature {
-                border: white solid 1px;
-                border-radius: 5px;
-                width: 40%;
-                margin: 0 10px;
-                padding: 10px;
-            
-            }
-            
-            @media (max-width: 720px){
-                .featureBox{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-            
-                .feature {
-                    margin: 10px 0;
-                    width: 60%;
-                }
-            }
-            
-            .icon {
-                font-size: 50px;
-                margin-bottom: 8px;
-                color: goldenrod;
-            }
-            
-            #process {
-                margin-bottom: 25px;
-            }
-            
-            #video {
-                width: 560px;
-                height: 350px;
-            }
-            
-            @media only screen and (max-width: 600px) {
-                #video {
-                    width: 440px;
-                    height: 230px;
-                }
-            }
-            
-            #prices {
-                
-                padding: 20px;
-            }
-            
-            .priceArea {
-                
-                padding: 10px;
-            
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-around;
-            }
-            
-            .priceBox {
-                margin: 10px;
-                padding: 10px;
-                border-radius: 5px;
-                border: solid white 1px;
-            }
-            
-            .priceBox img {
-                max-width: 350px;
-                height: auto;
-            }
-            
-                        /* -------------------- *\
-                                 #FOOTER
-                        \* -------------------- */
-            
-            #footer {
-                width: 100%;
-                height: 30px;
-                background-color: black;
-                font-size: 10px;
-            
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            
-            }
-            
-            #footer p {
-                font-size: 17px;
-            }
-            
-            @media only screen and (max-width: 600px) {
-                #footer {
-                    height: 25px;
-                    justify-content: center;
-                }
-                
-                #footer p {
-                    text-align: center;
-                    font-size: 15px;
-                }
-            }
-            
-            
-            
-            
-                        /* -------------------- *\
-                                ANIMATIONS
-                        \* -------------------- */
-            
-            @keyframes toMobile {
-                from {
-                    opacity: 1;
-                } to {
-                    opacity: 0;
-                }
-            }
-            
-            @keyframes toDesktop {
-                from {
-                    opacity: 0;
-                } to {
-                    opacity:  1;
-                   /
-                }
-            }
-            
-            
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                } to {
-                    opacity: 1;
-                }
-            }
-            
-            @keyframes fadeOut {
-                from {
-                    opacity: 1;
-                } to {
-                    opacity:  0;
-                    
-                }
-            }
-            
+#header {
+    width: 100%;
+    min-height: 55px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+
+    background-color: white;
+
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+        
+}
+
+
+#header-img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.desktop {
+    animation: toDesktop 2s forwards;
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    list-style: none;
+
+}
+
+#nav-bar li {
+    padding: 10px;
+    margin-left: 10px;    
+}
+
+.drop-btn {
+    border: none;
+    padding: 5px;
+    background-color: white;
+    width: 15px;
+    height: auto;
+
+}
+
+.icon {
+    color: goldenrod;
+    font-size: 25px;
+}
+
+.mobile {
+    position: relative;
+    display: none;
+    margin-right: 25px;
+    opacity: 0;
+
+    animation: fadeOut 2s forwards;
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+#dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    }
+
+#dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.mobile:hover #dropdown-content {
+    display: block;
+    justify-content: left;
+}
+
+/* DROPDOWN MENU FOR MOBILE */
+@media only screen and (max-width: 720px) {
+    
+    .desktop {
+        animation: toMobile 2s forwards;
+        display: none;
+        
+    }
+
+    .mobile {
+        animation: fadeIn 2s 250ms forwards;
+        display: inline-block;
+    }
+    
+}
+
+            /* -------------------- *\
+                        #MAIN
+            \* -------------------- */
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: auto;
+    margin-top: 60px;
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
+
+            /* -------------------- *\
+                        #FEATURES
+            \* -------------------- */
+
+#features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#titleBox {
+    text-align: center;
+    margin: 15px 0;
+}
+
+#form {
+    border: white solid 1px;
+    border-radius: 8px;
+    padding: 10px 25px;
+    margin-bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#email {
+    width: 99%;
+    height: 25px;
+    border-radius: 2px;
+    padding: 0 5px;
+    border-style: none;
+    margin-bottom: 2px;
+}
+
+#submit {
+    background-color: goldenrod;
+    color: white;
+    border-radius: 5px;
+    border-style: none;
+    width: 99%;
+    height: auto;
+    padding: 0 5px;
+
+}
+
+.featureBox {
+    padding: 30px;
+    margin-bottom: 25px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    text-align: center;
+}
+
+
+.feature {
+    border: white solid 1px;
+    border-radius: 5px;
+    width: 40%;
+    margin: 0 10px;
+    padding: 10px;
+
+}
+
+@media (max-width: 720px){
+    .featureBox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        margin: 10px 0;
+        width: 60%;
+    }
+}
+
+.icon {
+    font-size: 50px;
+    margin-bottom: 8px;
+    color: goldenrod;
+}
+
+#process {
+    margin-bottom: 25px;
+}
+
+#video {
+    width: 560px;
+    height: 350px;
+}
+
+@media only screen and (max-width: 600px) {
+    #video {
+        width: 320px;
+        height: auto;
+    }
+}
+
+#prices {
+    
+    padding: 20px;
+}
+
+.priceArea {
+    
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.priceBox {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid white 1px;
+}
+
+.priceBox img {
+    max-width: 350px;
+    height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .priceBox img {
+        max-width: 250px;
+        height: auto;
+    }
+}
+
+
+            /* -------------------- *\
+                        #FOOTER
+            \* -------------------- */
+
+#footer {
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    font-size: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#footer p {
+    font-size: 17px;
+}
+
+@media only screen and (max-width: 600px) {
+    #footer {
+        height: 25px;
+        justify-content: center;
+    }
+    
+    #footer p {
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+
+
+
+            /* -------------------- *\
+                    ANIMATIONS
+            \* -------------------- */
+
+@keyframes toMobile {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
+}
+
+@keyframes toDesktop {
+    from {
+        opacity: 0;
+    } to {
+        opacity:  1;
+        /
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    } to {
+        opacity:  0;
+        
+    }
+}
