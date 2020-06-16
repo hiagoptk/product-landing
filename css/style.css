@@ -65,7 +65,8 @@ a {
 
     background-color: white;
 
-    position: fixed top;
+    position: fixed;
+    top: 0;
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
@@ -266,9 +267,19 @@ a {
 }
 
 #process {
-    border: goldenrod solid;
-
     margin-bottom: 25px;
+}
+
+#video {
+    width: 560px;
+    height: 350px;
+}
+
+@media only screen and (max-width: 600px) {
+    #video {
+        width: 440px;
+        height: 230px;
+    }
 }
 
 #prices {
@@ -301,14 +312,31 @@ a {
 
 #footer {
     width: 100%;
-    height: 25px;
+    height: 30px;
     background-color: black;
     font-size: 10px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
+}
+
+#footer p {
+    font-size: 17px;
+}
+
+@media only screen and (max-width: 600px) {
+    #footer {
+        height: 25px;
+        justify-content: center;
+    }
+    
+    #footer p {
+        text-align: center;
+        font-size: 15px;
+    }
 }
 
 
@@ -351,19 +379,5 @@ a {
     } to {
         opacity:  0;
         
-    }
-}
-
-@keyframes vai-e-volta {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
     }
 }
